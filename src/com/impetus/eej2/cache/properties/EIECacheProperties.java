@@ -29,4 +29,5 @@ public class EIECacheProperties {
 	public void setInsertStatement(String insertStatement) {
 		this.insertStatement = insertStatement;
 	}
+	
 }
