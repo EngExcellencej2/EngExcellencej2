@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Spring context file to inject cql statements -->
+	<bean id="cacheProp" class="com.impetus.eej2.cache.properties.EIECacheProperties">
+		<property name="insertStatement">
+			<value>
+	<![CDATA[INSERT INTO <COLUMN_FAMILY_NAME> () VALUES (?,?,?,?...)]]>
+			</value>
+		</property>
+		<property name="fetchStatement">
+			<value>
+	<![CDATA[SELECT * FROM <COLUMN_FAMILY_NAME> WHERE ROW_ID = ?]]>
+
+			</value>
+		</property>
+	</bean>
+</beans>
